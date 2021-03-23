@@ -1,61 +1,58 @@
-class authForms{
+class authForms {
+  get createAccountForm() {
+    return $("#create-account_form");
+  }
 
-    get createAccountForm() {
-        return $('#create-account_form')
-    }
+  get createAccountEmailField() {
+    return $("#email_create");
+  }
 
-    get createAccountEmailField(){
-        return $('#email_create')
-    }
+  get createAccountBtn() {
+    return $("#SubmitCreate");
+  }
 
-    get createAccountBtn(){
-        return $('#SubmitCreate')
-    }
+  get signInForm() {
+    return $("#login_form");
+  }
 
+  get invalidErrorMsg() {
+    return $("#create_account_error");
+  }
 
-    get signInForm(){
-        return $('#login_form')
-    }
+  get accountCreationFrom() {
+    return $("#account-creation_form");
+  }
 
-    get invalidErrorMsg(){
-        return $('#create_account_error')
-    }
+  accountCreationFormVisible() {
+    this.accountCreationFrom.waitForExist();
+  }
 
-    get accountCreationFrom(){
-        return $('#account-creation_form')
-    }
+  accountFromIsVisbile() {
+    this.createAccountForm.waitForExist();
+  }
 
-    accountCreationFormVisible (){
-        this.accountCreationFrom.waitForExist()
-    }
+  emailFeildIsVisbile() {
+    this.createAccountEmailField.waitForExist();
+  }
 
-    accountFromIsVisbile() {
-        this.createAccountForm.waitForExist()
-    }
+  createAcctBtnIsVisible() {
+    this.createAccountBtn.waitForExist();
+  }
 
-   emailFeildIsVisbile() {
-        this.createAccountEmailField.waitForExist()
-    }
+  signInFormIsVisible() {
+    this.createAccountForm.waitForExist();
+  }
 
-    createAcctBtnIsVisible() {
-        this.createAccountBtn.waitForExist()
-    }
+  submitNewEmail() {
+    this.createAccountBtn.click();
+  }
 
-    signInFormIsVisible() {
-        this.createAccountForm.waitForExist()
-    }
+  error() {
+    this.invalidErrorMsg.waitForExist();
+  }
 
-    submitNewEmail(){
-        this.createAccountBtn.click()
-    }
-
-    error() {
-        this.invalidErrorMsg.waitForExist()
-    }
-
-    fillEmailField(email){
-        this.createAccountEmailField.setValue(email)
-    }
-
+  fillEmailField(email) {
+    this.createAccountEmailField.setValue(email);
+  }
 }
 module.exports = new authForms();
