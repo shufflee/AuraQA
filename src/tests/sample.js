@@ -43,38 +43,38 @@ describe("Aura Code Challenge - Create User Account Tests", () => {
     expect(errorMsg).toBe("Invalid email address.");
   });
 
-  test("it does not allow user to continue with invalid email address", async () => {
-    authPageForms.fillEmailField("invalid");
-    authPageForms.submitNewEmail();
-    expect(errorMsg).toBe("Invalid email address.");
-  });
+  // test("it does not allow user to continue with invalid email address", async () => {
+  //   authPageForms.fillEmailField("invalid");
+  //   authPageForms.submitNewEmail();
+  //   expect(errorMsg).toBe("Invalid email address.");
+  // });
 
-  test("it does not allow an already registered user to continue", async () => {
-    authPageForms.fillEmailField("auratest@testing.com");
-    authPageForms.submitNewEmail();
-    expect(errorMsg).toBe(
-      "An account using this email address has already been registered. Please enter a valid password or request a new one."
-    );
-  });
+  // test("it does not allow an already registered user to continue", async () => {
+  //   authPageForms.fillEmailField("auratest@testing.com");
+  //   authPageForms.submitNewEmail();
+  //   expect(errorMsg).toBe(
+  //     "An account using this email address has already been registered. Please enter a valid password or request a new one."
+  //   );
+  // });
 
-  test("it does allows user with a valid and unused email to naviagte to the personal informatio form ", async () => {
-    authPageForms.fillEmailField("auratest1@testing.com");
-    authPageForms.submitNewEmail();
-    expect(authPageForms.accountCreationFormVisible).toBeDefined();
-  });
+  // test("it does allows user with a valid and unused email to naviagte to the personal informatio form ", async () => {
+  //   authPageForms.fillEmailField("auratest1@testing.com");
+  //   authPageForms.submitNewEmail();
+  //   expect(authPageForms.accountCreationFormVisible).toBeDefined();
+  // });
 
-  test("validation for personal information", async () => {
-    /*
-    with values
-    without values
-    */
-  });
+  // test("validation for personal information", async () => {
+  //   /*
+  //   with values
+  //   without values
+  //   */
+  // });
 
-  test("validation for required fields left emply", async () => {});
+  // test("validation for required fields left emply", async () => {});
 
-  test("validation for required fields format", async () => {});
+  // test("validation for required fields format", async () => {});
 
-  test("validation for required fields filled", async () => {
-    //sucessful account creation
-  });
+  // test("validation for required fields filled", async () => {
+  //   //sucessful account creation
+  // });
 });

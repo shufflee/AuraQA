@@ -44,6 +44,7 @@ class authForms {
   }
 
   submitNewEmail() {
+    this.createAccountBtn.waitForExist();
     this.createAccountBtn.click();
   }
 
